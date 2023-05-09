@@ -7,8 +7,7 @@ import 키워드란?
 - 미리 제작 되어서 제공되는 기능의 모음을 의미한다. (즉, 라이브러리를 활용하면 특정 기능을 처음부터 제작 할 필요가 없기 때문에
 작업 시간을 단축시키는 것이 가능하다.)
 
-Python 은 라이브러리라는 용어보다는 모듈이라는 용어를 사용하며 특정 모듈을 추가시키기 위해서는 from 또는 import 키워드를 사용하면
-된다.
+Python 은 라이브러리라는 용어보다는 모듈이라는 용어를 사용하며 특정 모듈을 추가시키기 위해서는 from 또는 import 키워드를 사용하면 된다.
 """
 import os
 import sys
@@ -16,6 +15,10 @@ import sys
 from Example.Classes.Example_09.Example_09 import *
 from Example.Classes.Example_10.Example_10 import *
 from Example.Classes.Example_11.Example_11 import *
+from Example.Classes.Example_12.Example_12 import *
+from Example.Classes.Example_13.Example_13 import *
+from Example.Classes.Example_14.Example_14 import *
+from Example.Classes.Example_15.Example_15 import *
 
 """
 Python 프로젝트
@@ -56,5 +59,9 @@ if __name__ == "__main__":
 	프로그램이 시작 될 때 입력 된 데이터를 가져와서 다양한 만들어 낼 수 있다는 것을 알 수 있다.)
 	"""
 	# Example_09(sys.argv)
-	# Example_10(sys.argv)
-	Example_11(sys.argv)
+	Example_10(sys.argv)
+	# Example_11(sys.argv)
+	# Example_12(sys.argv)
+	# Example_13(sys.argv)
+	# Example_14(sys.argv)
+	# Example_15(sys.argv)

@@ -51,10 +51,12 @@ def Example_10(args):
 def Example_10_01(args):
 	nVal = 10
 	fVal = 3.14
+	bIsTrue = True
 	
 	print("=====> 값 형식 자료형 <=====")
 	print("{0}, {1}".format(nVal, type(nVal)))
 	print("{0}, {1}".format(fVal, type(fVal)))
+	print("{0}, {1}".format(bIsTrue, type(bIsTrue)))
 	
 	oStr = "Hello, World!"
 	oList = [1, 2, 3, 4, 5]
@@ -120,6 +122,11 @@ def Example_10_03(args):
 	print("{0} ** {1} = {2}".format(nVal01, nVal02, nVal01 ** nVal02))
 	print("{0} // {1} = {2}".format(nVal01, nVal02, nVal01 // nVal02))
 	
+	"""
+	관계 연산자란?
+	- 데이터의 대/소 여부를 판단하기 위한 연산자를 의미한다. (즉, 해당 연산자의 결과는 참 or 또는 거짓을 나타내는 bool 형 데이터가
+	반환된다는 것을 알 수 있다.)
+	"""
 	print("\n=====> 관계 연산자 <=====")
 	print("{0} < {1} = {2}".format(nVal01, nVal02, nVal01 < nVal02))
 	print("{0} > {1} = {2}".format(nVal01, nVal02, nVal01 > nVal02))
@@ -144,3 +151,4 @@ def Example_10_03(args):
 	print("{0:08b} ^ {1:08b} = {2:08b}".format(nVal01, nVal02, nVal01 ^ nVal02))
 	print("{0:08b} << 1 = {1:08b}".format(nVal01, nVal01 << 1))
 	print("{0:08b} >> 1 = {1:08b}".format(nVal02, nVal02 >> 1))
+	print("~{0:08b} = {1:08b}".format(nVal01, ~nVal01 + 1))

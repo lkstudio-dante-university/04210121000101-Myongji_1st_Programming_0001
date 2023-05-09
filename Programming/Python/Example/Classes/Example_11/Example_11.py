@@ -6,7 +6,8 @@ import sys
 def Example_11(args):
 	# Example_11_01(args)
 	# Example_11_02(args)
-	Example_11_03(args)
+	# Example_11_03(args)
+	Example_11_04(args)
 
 
 # Example 11 - 1
@@ -93,4 +94,21 @@ def Example_11_02(args):
 
 # Example 11 - 3
 def Example_11_03(args):
-	pass
+	for i in range(2, 10):
+		print("=====> {0} 단 <=====".format(i))
+		
+		for j in range(1, 10):
+			print("{0} * {1} = {2}".format(i, j, i * j))
+		
+		print()
+
+
+# Example 11 - 4
+def Example_11_04(args):
+	for i in range(2, 10):
+		print("=====> {0} 단 <=====".format(i))
+		
+		for j in range(1, 10):
+			print("{0} * {1} = {2}".format(i, j, i * j))
+		
+		print()
