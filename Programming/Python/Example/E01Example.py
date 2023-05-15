@@ -12,19 +12,29 @@ Python 은 라이브러리라는 용어보다는 모듈이라는 용어를 사�
 import os
 import sys
 
-from Example.Classes.Example_09.Example_09 import *
-from Example.Classes.Example_10.Example_10 import *
-from Example.Classes.Example_11.Example_11 import *
-from Example.Classes.Example_12.Example_12 import *
-from Example.Classes.Example_13.Example_13 import *
-from Example.Classes.Example_14.Example_14 import *
-from Example.Classes.Example_15.Example_15 import *
+sys.path.append(os.getcwd())
+
+from Classes.Example_09.Example_09 import *
+from Classes.Example_10.Example_10 import *
+from Classes.Example_11.Example_11 import *
+from Classes.Example_12.Example_12 import *
+from Classes.Example_13.Example_13 import *
+from Classes.Example_14.Example_14 import *
+from Classes.Example_15.Example_15 import *
 
 """
 Python 프로젝트
 - Example_09 (Python 기초)
-- Example_10 (자료형, 변수, 연산자)
-- Example_11 (컬렉션, 제어문)
+- Example_10 (자료형, 변수 및 연산자)
+- Example_11 (컬렉션 및 제어문 - 1)
+- Example_12 (컬렉션 및 제어문 - 2)
+- Example_13 (메서드 - 1)
+- Example_14 (메서드 - 2)
+- Example_15 (모듈화 프로그래밍)
+
+Python 학습 사이트
+- 생활 코딩 (https://opentutorials.org/course/4769)
+- 점프 투 파이썬 (https://wikidocs.net/book/1)
 """
 
 """
@@ -59,8 +69,8 @@ if __name__ == "__main__":
 	프로그램이 시작 될 때 입력 된 데이터를 가져와서 다양한 만들어 낼 수 있다는 것을 알 수 있다.)
 	"""
 	# Example_09(sys.argv)
-	Example_10(sys.argv)
-	# Example_11(sys.argv)
+	# Example_10(sys.argv)
+	Example_11(sys.argv)
 	# Example_12(sys.argv)
 	# Example_13(sys.argv)
 	# Example_14(sys.argv)
