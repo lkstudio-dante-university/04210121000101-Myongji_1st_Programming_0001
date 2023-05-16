@@ -65,9 +65,9 @@ Python 연산자 종류
 
 # Example 10
 def Example_10(args):
-	# Example_10_01(args)
+	Example_10_01(args)
 	# Example_10_02(args)
-	Example_10_03(args)
+	# Example_10_03(args)
 
 
 # Example 10 - 1

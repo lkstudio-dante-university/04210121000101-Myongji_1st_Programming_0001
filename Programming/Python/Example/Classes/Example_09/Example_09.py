@@ -9,3 +9,4 @@ def Example_09(args):
 	특정 정보를 화면에 출력하는 것이 가능하다.)
 	"""
 	print("Hello, World!")
+	

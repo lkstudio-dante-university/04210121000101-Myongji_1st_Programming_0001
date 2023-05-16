@@ -12,15 +12,15 @@ Python 은 라이브러리라는 용어보다는 모듈이라는 용어를 사�
 import os
 import sys
 
-sys.path.append(os.getcwd())
+sys.path.append(os.getcwd().replace("\\", "/"))
 
-from Classes.Example_09.Example_09 import *
-from Classes.Example_10.Example_10 import *
-from Classes.Example_11.Example_11 import *
-from Classes.Example_12.Example_12 import *
-from Classes.Example_13.Example_13 import *
-from Classes.Example_14.Example_14 import *
-from Classes.Example_15.Example_15 import *
+from Example.Classes.Example_09.Example_09 import *
+from Example.Classes.Example_10.Example_10 import *
+from Example.Classes.Example_11.Example_11 import *
+from Example.Classes.Example_12.Example_12 import *
+from Example.Classes.Example_13.Example_13 import *
+from Example.Classes.Example_14.Example_14 import *
+from Example.Classes.Example_15.Example_15 import *
 
 """
 Python 프로젝트
@@ -68,9 +68,9 @@ if __name__ == "__main__":
 	sys.argv 를 활용하면 Python 프로그램이 실행 될 때 추가적으로 입력 된 데이터를 가져오는 것이 가능하다. (즉, 해당 변수를 활용하면
 	프로그램이 시작 될 때 입력 된 데이터를 가져와서 다양한 만들어 낼 수 있다는 것을 알 수 있다.)
 	"""
-	# Example_09(sys.argv)
+	Example_09(sys.argv)
 	# Example_10(sys.argv)
-	Example_11(sys.argv)
+	# Example_11(sys.argv)
 	# Example_12(sys.argv)
 	# Example_13(sys.argv)
 	# Example_14(sys.argv)
