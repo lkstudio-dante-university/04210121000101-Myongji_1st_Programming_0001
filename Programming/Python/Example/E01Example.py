@@ -20,24 +20,12 @@ from Example.Classes.Example_11.Example_11 import *
 from Example.Classes.Example_12.Example_12 import *
 from Example.Classes.Example_13.Example_13 import *
 from Example.Classes.Example_14.Example_14 import *
-from Example.Classes.Example_15.Example_15 import *
 
 """
-Python 프로젝트
-- Example_09 (Python 기초)
-- Example_10 (자료형, 변수 및 연산자)
-- Example_11 (컬렉션 및 제어문 - 1)
-- Example_12 (컬렉션 및 제어문 - 2)
-- Example_13 (메서드 - 1)
-- Example_14 (메서드 - 2)
-- Example_15 (모듈화 프로그래밍)
-
 Python 학습 사이트
 - 생활 코딩 (https://opentutorials.org/course/4769)
 - 점프 투 파이썬 (https://wikidocs.net/book/1)
-"""
 
-"""
 주석이란?
 - Python 인터프리터에 의해서 기계어로 변환되지 않는 구문을 의미한다. (즉, 주석은 컴퓨터가 아닌 사용자를 위한 기능이라는 것을 알 수 있다.)
 주석은 Python 을 비롯한 대부분의 고수준 언어에서 지원하는 기능으로 해당 기능은 주로 메모 기능으로 활용된다.
@@ -74,4 +62,3 @@ if __name__ == "__main__":
 	# Example_12(sys.argv)
 	# Example_13(sys.argv)
 	# Example_14(sys.argv)
-	# Example_15(sys.argv)
