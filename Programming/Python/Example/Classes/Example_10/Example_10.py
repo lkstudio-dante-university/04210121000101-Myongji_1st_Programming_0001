@@ -69,12 +69,16 @@ def Example_10(args):
 	# Example_10_02(args)
 	# Example_10_03(args)
 
+g_nGlobalVal = 10
 
 # Example 10 - 1
 def Example_10_01(args):
 	nVal = 10
 	fVal = 3.14
 	bIsTrue = True
+
+	# global g_nGlobalVal
+	# g_nGlobalVal = 20
 	
 	"""
 	변수 이름을 명시하는 것은 해당 변수에 저장 된 데이터를 가져오는 것을 의미한다. (즉, 정수 10 이 저장 된 특정 변수가 있을 경우 해당 변수에
