@@ -1,12 +1,14 @@
 import os
 import sys
 
+
 # Example 11
 def Example_11(args):
-	Example_11_01(args)
+	# Example_11_01(args)
 	# Example_11_02(args)
 	# Example_11_03(args)
 	# Example_11_04(args)
+	Example_11_05(args)
 
 
 # Example 11 - 1
@@ -142,6 +144,10 @@ def Example_11_03(args):
 	- while + 조건 + 반복 할 명령문
 	"""
 	while i < 10:
+		"""
+		print 메서드에 end 문자를 명시해주면 자동으로 개행처리되는 것을 방지 할 수 있다. (즉, print 메서드는 항상 주어진 문장을 출력 후
+		개행 처리를 하기 때문에 특정 라인에 여러 문장을 출력하고 싶다면 end 문자를 변경해주면 된다.)
+		"""
 		print("{0}, ".format(i + 1), end="")
 		i += 1
 	
@@ -159,12 +165,20 @@ def Example_11_03(args):
 	"""
 	for i in range(0, 10):
 		print("{0}, ".format(i + 1), end="")
-		
+	
 	print()
 
 
 # Example 11 - 4
 def Example_11_04(args):
+	nVal = int(input("구구단 입력 : "))
+	
+	for i in range(1, 10):
+		print("{0} * {1} = {2}".format(nVal, i, nVal * i))
+
+
+# Example 11 - 5
+def Example_11_05(args):
 	"""
 	반복문을 비롯한 제어문은 중첩으로 사용하는 것이 가능하다. (즉, 반복문 내부에 다시 반복문을 작성함으로서 이중 루프 구조를 만드는 것이
 	가능하다.)

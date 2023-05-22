@@ -66,19 +66,35 @@ Python 연산자 종류
 # Example 10
 def Example_10(args):
 	Example_10_01(args)
-	# Example_10_02(args)
-	# Example_10_03(args)
 
-g_nGlobalVal = 10
+
+# Example_10_02(args)
+# Example_10_03(args)
+
+g_nGlobalVal = 0
+
 
 # Example 10 - 1
 def Example_10_01(args):
+	"""
+	Python 은 변수의 선언과 사용이 명확하게 구분되지 않기 때문에 특정 변수를 사용 할 때 이를 주의해야한다. (즉, 특정 변수의 값을 가져오는
+	것은 항상 변수의 사용에 해당하지만 특정 변수에 값을 저장하는 행위는 선언과 사용 모두 해당한다는 것을 알 수 있다.)
+	
+	특정 변수에 값을 할당 할 경우 이는 변수 선언에 해당하며 이미 선언 된 변수에 값을 할당하는 것은 변수의 사용에 해당한다.
+	"""
 	nVal = 10
 	fVal = 3.14
 	bIsTrue = True
-
-	# global g_nGlobalVal
-	# g_nGlobalVal = 20
+	
+	"""
+	global 키워드는 전역 변수를 사용하겠다는 것을 알리는 역할을 수행한다. (즉, 해당 키워드를 사용하지 않고 전역 변수에 값을 할당 할 경우
+	이는 전역 변수의 사용이 아니라 전역 변수와 동일한 이름을 지니는 지역 변수의 선언에 해당한다는 것을 알 수 있다.)
+	
+	Python 은 특정 지역이 항상 전역보다 우선 순위가 높기 때문에 특정 지역에서 전역 변수를 사용하기 위해서는 반드시 global 키워드를 명시해
+	줘야한다.
+	"""
+	global g_nGlobalVal
+	g_nGlobalVal = 10
 	
 	"""
 	변수 이름을 명시하는 것은 해당 변수에 저장 된 데이터를 가져오는 것을 의미한다. (즉, 정수 10 이 저장 된 특정 변수가 있을 경우 해당 변수에
@@ -120,15 +136,8 @@ def Example_10_01(args):
 	print("{0}, {1}".format(oTuple, type(oTuple)))
 
 
-g_nGlobalVal = 0
-
-
 # Example 10 - 2
 def Example_10_02(args):
-	"""
-	특정 영역 내부에서 외부에 존재하는 전역 변수에 접근하기 위해서는 반드시 global 키워드를 사용해야한다. (즉, global 키워드는 해당 변수가
-	지역 변수가 아닌 전역 변수라는 것을 Python 인터프리터에게 알리는 역할을 수행한다.)
-	"""
 	nLocalVal = 10
 	global g_nGlobalVal
 	

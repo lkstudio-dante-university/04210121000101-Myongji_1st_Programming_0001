@@ -17,12 +17,12 @@ import sys
 
 sys.path.append(os.getcwd().replace("\\", "/"))
 
-from Classes.Example_09.Example_09 import *
-from Classes.Example_10.Example_10 import *
-from Classes.Example_11.Example_11 import *
-from Classes.Example_12.Example_12 import *
-from Classes.Example_13.Example_13 import *
-from Classes.Example_14.Example_14 import *
+from Example.Classes.Example_09.Example_09 import *
+from Example.Classes.Example_10.Example_10 import *
+from Example.Classes.Example_11.Example_11 import *
+from Example.Classes.Example_12.Example_12 import *
+from Example.Classes.Example_13.Example_13 import *
+from Example.Classes.Example_14.Example_14 import *
 
 
 """
@@ -40,11 +40,18 @@ Python 학습 사이트
 따라서, 주석을 통해 명령문의 동작 방식이나 원리 등을 메모해놓는다면 이 후에 해당 명령문을 다시 해석 할 때 소요되는 시간을 단축시키는 것이
 가능하다.
 
+Python 주석 사용 방법
+- #
+
+Python 의 주석은 # 기호롤 시작한다. (즉, 해당 기호 이후에 작성한 문장은 모두 주석이 된다는 것을 알 수 있다.)
+
 들여쓰기란?
 - Python 은 특정 영역을 의미하는 연산자 (기호) 가 별도로 존재하지 않기 떄문에 들여쓰기를 통해서 영역을 구분한다. (즉, 동일한 명령문이라고
 하더라도 들여쓰기 수준에 따라 잘못된 동작을 할 수 있다는 것을 의미한다.)
 
 Python 은 들여쓰기도 문법이기 때문에 다른 일반적인 고수준 언어처럼 자유롭게 명령문을 구성하는데 제약이 따른다는 단점이 존재한다.
+또한, 들여쓰기는 탭 문자와 공백 문자 모두 사용하는 것이 가능하지만 두 문자를 섞어서 사용하는 것은 추천하지 않는다. (즉, 탭이나 공백 중 하나로
+통일해야 잘못 된 들여쓰기에 의한 문제를 사전에 예방 할 수 있다.)
 
 메인 모듈이란?
 - 가장 먼저 실행 된 Python 파일을 메인 모듈이라고 한다.
@@ -66,9 +73,9 @@ if __name__ == "__main__":
 	명령 프롬프트 (맥의 경우 터미널에 해당) 상에서 해당 명령어를 통해 특정 Python 파일을 실행했을 경우 sys.argv 에는 실행한 파일의 경로와
 	더불어 A, B, C 데이터도 같이 전달 된다는 것을 알 수 있다.
 	"""
-	Example_09(sys.argv)
+	# Example_09(sys.argv)
 	# Example_10(sys.argv)
 	# Example_11(sys.argv)
 	# Example_12(sys.argv)
 	# Example_13(sys.argv)
-	# Example_14(sys.argv)
+	Example_14(sys.argv)
