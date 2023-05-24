@@ -33,6 +33,24 @@ Ex)
 
 
 과제 12 - 3
+- 수직 다이어그램 출력하기
+- 3 개의 정수를 입력 받아 수직으로 다이어그램 출력하기
+
+
+Ex)
+정수 (3 개 입력) : 3 5 6
+
+=====> 결과 <=====
+3 5 6
+* * *
+* * *
+* * *
+  * *
+  * *
+    *
+
+
+과제 12 - 4
 - 여러 형태의 삼각형 출력하기
 - 라인 수를 입력 받아 해당 라인만큼 여러 형태의 삼각형 출력하기
 
@@ -80,7 +98,8 @@ Ex)
 def Practice_12(args):
 	# Practice_12_01(args)
 	# Practice_12_02(args)
-	Practice_12_03(args)
+	# Practice_12_03(args)
+	Practice_12_04(args)
 
 
 # Practice 12 - 1
@@ -95,4 +114,9 @@ def Practice_12_02(args):
 
 # Practice 12 - 3
 def Practice_12_03(args):
+	pass
+
+
+# Practice 12 - 4
+def Practice_12_04(args):
 	pass
