@@ -1,6 +1,11 @@
 import os
 import sys
 
+from Practice.Classes.Practice_12.Practice_12_01 import *
+from Practice.Classes.Practice_12.Practice_12_02 import *
+from Practice.Classes.Practice_12.Practice_12_03 import *
+from Practice.Classes.Practice_12.Practice_12_04 import *
+
 """
 과제 12 - 1
 - 학점 계산 프로그램 제작하기
@@ -100,23 +105,3 @@ def Practice_12(args):
 	# Practice_12_02(args)
 	# Practice_12_03(args)
 	Practice_12_04(args)
-
-
-# Practice 12 - 1
-def Practice_12_01(args):
-	pass
-
-
-# Practice 12 - 2
-def Practice_12_02(args):
-	pass
-
-
-# Practice 12 - 3
-def Practice_12_03(args):
-	pass
-
-
-# Practice 12 - 4
-def Practice_12_04(args):
-	pass
