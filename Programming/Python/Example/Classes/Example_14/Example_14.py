@@ -1,6 +1,8 @@
 import os
 import sys
 
+from Example.Classes.Example_14.Example_14_01 import *
+
 """
 모듈화 프로그래밍이란?
 - 명령문을 기능 별로 나누어 관리함으로서 관리에 대한 효율성을 높히는 방법을 의미한다. (즉, 하나의 파일에 많은 명령문이 존재 할 경우 해당 파일을
@@ -34,8 +36,3 @@ Ex)
 # Example 14
 def Example_14(args):
 	Example_14_01(args)
-
-
-# Example 14 - 1
-def Example_14_01(args):
-	pass
