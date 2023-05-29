@@ -72,5 +72,5 @@ Ex)
 
 # Example 13
 def Example_13(args):
-	Example_13_01(args)
+	# Example_13_01(args)
 	Example_13_02(args)

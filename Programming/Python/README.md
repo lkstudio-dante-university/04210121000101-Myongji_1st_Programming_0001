@@ -1,4 +1,4 @@
-Python 프로젝트
+Python 학습 주제
 - Example_09 (Python 기초)
 - Example_10 (자료형, 변수  및 연산자)
 - Example_11 (컬렉션 및 제어문 - 1)
