@@ -24,7 +24,6 @@ from Example.Classes.Example_12.Example_12 import *
 from Example.Classes.Example_13.Example_13 import *
 from Example.Classes.Example_14.Example_14 import *
 
-
 """
 Python 학습 사이트
 - 생활 코딩 (https://opentutorials.org/course/4769)
@@ -77,5 +76,5 @@ if __name__ == "__main__":
 	# Example_10(sys.argv)
 	# Example_11(sys.argv)
 	# Example_12(sys.argv)
-	Example_13(sys.argv)
-	# Example_14(sys.argv)
+	# Example_13(sys.argv)
+	Example_14(sys.argv)
