@@ -106,6 +106,6 @@ Ex)
 def Practice_15(args):
 	# Practice_15_01(args)
 	# Practice_15_02(args)
-	Practice_15_03(args)
+	# Practice_15_03(args)
 	# Practice_15_04(args)
-	# Practice_15_05(args)
+	Practice_15_05(args)
