@@ -1,10 +1,10 @@
 import os
 import sys
 
-from Practice.Classes.Practice_12.Practice_12_01 import *
-from Practice.Classes.Practice_12.Practice_12_02 import *
-from Practice.Classes.Practice_12.Practice_12_03 import *
-from Practice.Classes.Practice_12.Practice_12_04 import *
+from E01.Practice.Classes.Practice_12.Practice_12_01 import *
+from E01.Practice.Classes.Practice_12.Practice_12_02 import *
+from E01.Practice.Classes.Practice_12.Practice_12_03 import *
+from E01.Practice.Classes.Practice_12.Practice_12_04 import *
 
 """
 과제 12 - 1

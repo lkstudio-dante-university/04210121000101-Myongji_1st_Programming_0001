@@ -1,11 +1,11 @@
 import os
 import sys
 
-from Practice.Classes.Practice_15.Practice_15_01 import *
-from Practice.Classes.Practice_15.Practice_15_02 import *
-from Practice.Classes.Practice_15.Practice_15_03 import *
-from Practice.Classes.Practice_15.Practice_15_04 import *
-from Practice.Classes.Practice_15.Practice_15_05 import *
+from E01.Practice.Classes.Practice_15.Practice_15_01 import *
+from E01.Practice.Classes.Practice_15.Practice_15_02 import *
+from E01.Practice.Classes.Practice_15.Practice_15_03 import *
+from E01.Practice.Classes.Practice_15.Practice_15_04 import *
+from E01.Practice.Classes.Practice_15.Practice_15_05 import *
 
 """
 기말 평가 15 - 1

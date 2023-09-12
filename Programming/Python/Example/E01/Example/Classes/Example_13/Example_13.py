@@ -1,8 +1,8 @@
 import os
 import sys
 
-from Example.Classes.Example_13.Example_13_01 import *
-from Example.Classes.Example_13.Example_13_02 import *
+from E01.Example.Classes.Example_13.Example_13_01 import *
+from E01.Example.Classes.Example_13.Example_13_02 import *
 
 """
 Python 메서드 구현 방법

@@ -3,8 +3,8 @@ import sys
 
 sys.path.append(os.getcwd().replace("\\", "/"))
 
-from Practice.Classes.Practice_12.Practice_12 import *
-from Practice.Classes.Practice_15.Practice_15 import *
+from E01.Practice.Classes.Practice_12.Practice_12 import *
+from E01.Practice.Classes.Practice_15.Practice_15 import *
 
 # 메인 모듈 일 경우
 if __name__ == "__main__":
