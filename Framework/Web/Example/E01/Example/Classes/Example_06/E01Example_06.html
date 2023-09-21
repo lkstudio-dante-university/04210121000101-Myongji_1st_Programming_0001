@@ -31,27 +31,6 @@
 			- 함수 호출 시 전달 된 데이터를 저장하는 용도로 사용되는 변수를 의미한다. (즉, 매개 변수가 존재한다는 것은 해당 함수는 입력이
 			존재하는 함수라는 것을 알 수 있다.)
 			*/
-			let oTokens = prompt("정수 (2 개) 입력").split(" ");
-
-			let nVal01 = Number(oTokens[0]);
-			let nVal02 = Number(oTokens[1]);
-
-			/*
-			특정 함수를 호출 (실행) 하고 싶다면 함수 이름을 명시 후 ( ) (함수 호출 연산자) 를 명시해주면 된다. 단, 함수가 입력 데이터를 필요로
-			할 경우 반드시 해당 함수가 요구하는 만큼 입력 데이터를 명시해 줄 필요가 있다. (즉, 함수가 2 개의 입력 데이터를 요구한다면 함수 호출
-			시 2 개의 데이터를 입력으로 전달 할 필요가 있다는 것을 알 수 있다.)
-			*/
-			let nSumVal = GetSumVal(nVal01, nVal02);
-			let nSubVal = GetSubVal(nVal01, nVal02);
-			let nMultiplyVal = GetMultiplyVal(nVal01, nVal02);
-			let fDivideVal = GetDivideVal(nVal01, nVal02);
-
-			document.write("<p>=====> 결과 <=====</p>");
-			document.write(`<p>${nVal01} + ${nVal02} = ${nSumVal}</p>`);
-			document.write(`<p>${nVal01} - ${nVal02} = ${nSubVal}</p>`);
-			document.write(`<p>${nVal01} * ${nVal02} = ${nMultiplyVal}</p>`);
-			document.write(`<p>${nVal01} / ${nVal02} = ${fDivideVal}</p>`);
-			
 			/** 덧셈 결과를 반환한다 */
 			function GetSumVal(a_nVal01, a_nVal02) {
 				/*
@@ -76,6 +55,27 @@
 			function GetDivideVal(a_nVal01, a_nVal02) {
 				return a_nVal01 / a_nVal02;
 			}
+			
+			let oTokens = prompt("정수 (2 개) 입력").split(" ");
+
+			let nVal01 = Number(oTokens[0]);
+			let nVal02 = Number(oTokens[1]);
+
+			/*
+			특정 함수를 호출 (실행) 하고 싶다면 함수 이름을 명시 후 ( ) (함수 호출 연산자) 를 명시해주면 된다. 단, 함수가 입력 데이터를 필요로
+			할 경우 반드시 해당 함수가 요구하는 만큼 입력 데이터를 명시해 줄 필요가 있다. (즉, 함수가 2 개의 입력 데이터를 요구한다면 함수 호출
+			시 2 개의 데이터를 입력으로 전달 할 필요가 있다는 것을 알 수 있다.)
+			*/
+			let nSumVal = GetSumVal(nVal01, nVal02);
+			let nSubVal = GetSubVal(nVal01, nVal02);
+			let nMultiplyVal = GetMultiplyVal(nVal01, nVal02);
+			let fDivideVal = GetDivideVal(nVal01, nVal02);
+
+			document.write("<p>=====> 결과 <=====</p>");
+			document.write(`<p>${nVal01} + ${nVal02} = ${nSumVal}</p>`);
+			document.write(`<p>${nVal01} - ${nVal02} = ${nSubVal}</p>`);
+			document.write(`<p>${nVal01} * ${nVal02} = ${nMultiplyVal}</p>`);
+			document.write(`<p>${nVal01} / ${nVal02} = ${fDivideVal}</p>`);
 		</script>
 	</body>
 </html>

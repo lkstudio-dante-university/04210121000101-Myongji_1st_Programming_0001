@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Example 8</title>
+	</head>
+	<body>
+		<script>
+			/*
+			객체란?
+			- 특정 역할을 수행하는 사물 (대상) 을 의미하며 객체를 위주로 프로그램의 구조를 설계하는 방식을 객체 지향 프로그래밍이라고 한다.
+			
+			Java Script 와 같은 프로그래밍 언어는 사물의 특징을 크게 속성과 행위로 구분함으로서 추상적으로 사물을 표현하는 것이 가능하다.
+			(즉, 사물의 속성은 변수를 통해 표현하는 것이 가능하고 행위는 함수를 통해 표현하는 것이 가능하다.)
+
+			Java Script 객체 선언 방법
+			- 클래스
+			- 리터널 객체
+
+			클래스란?
+			- 사물을 표현하기 위한 방법 중 하나로서 변수와 함수를 하나의 그룹으로 관리 할 수 있는 기능을 의미한다. (즉, 클래스를 활용하면
+			변수와 함수를 하나의 그룹으로 관리하는 것이 가능하기 때문에 사물의 속성과 행위를 표현하는 것이 가능하다.)
+
+			클래스는 사용자 정의 자료형으로서 클래스를 활용하면 프로그램의 목적에 맞는 데이터를 생성 후 제어하는 것이 가능하다. (즉, 사용자
+			정의 자료형은 사용자가 필요에 따라 직접 정의해서 활용 할 수 있는 자료형이라는 것을 알 수 있다.)
+
+			리터널 객체란?
+			- 딕셔너리를 활용해서 사물을 표현하는 방법을 의미한다. (즉, 딕셔너리는 키/벨류 쌍으로 특정 데이터를 관리하기 때문에 해당 컬렉션에
+			데이터 및 함수를 설정함으로서 특정 사물을 표현하는 것이 가능하다.)
+
+			Java Script 클래스 선언 방법
+			- class + 클래스 이름 + 클래스 멤버 (변수, 함수 등등...)
+
+			Ex)
+			class CCharacter {
+				m_nLV = 0;
+				m_nHP = 0;
+				m_nATK = 0;
+
+				ShowInfo() {
+					// Do Something
+				}
+			}
+
+			let oCharacter = new CCharacter();
+
+			클래스 vs 리터널 객체
+			- 클래스는 사용자 정의 자료형이기 때문에 특정 사물을 표현하기 위한 클래스를 한번 선언하면 언제든지 객체가 필요 할 때마다 재사용
+			하는 것이 가능하다.
+
+			반면, 리터널 객체는 일회성이기 때문에 객체가 여러개 필요 할 경우 클래스에 비해 객체를 생성하는 방법이 효율적이지 못하다는 단점이
+			존재한다. (즉, 클래스는 계속적으로 활용되는 사물을 표현하는데 적합하고 리터널 객체는 일회성으로 잠시 사용되는 사물을 표현하는데
+			적합하다는 것을 알 수 있다.)
+			*/
+			/** 캐릭터 */
+			class CCharacter {
+				m_nLV = 0;
+				m_nHP = 0;
+				m_nATK = 0;
+
+				/*
+				생성자란?
+				- 특정 클래스를 통해 생성 된 객체를 초기화하기 위한 특수한 함수를 의미한다. (즉, 생성자를 활용하면 객체를 생성과 동시에 원하는
+				데이터를 초기화하는 것이 가능하다.)
+
+				생성자는 사용자가 직접 호출하는 것은 불가능하며 new 키워드를 통해 객체가 생성되는 순간 Java Script 인터프리터에 의해서 자동으로
+				호출된다.
+				*/
+				/** 생성자 */
+				constructor(a_nLV, a_nHP, a_nATK) {
+					/*
+					this 키워드는 객체 자신을 의미하는 키워드이다. (즉, this 키워드를 통해 객체 자신을 참조함으로서 멤버 함수에서는 객체
+					자신이 지니고 있는 다른 멤버에 접근하는 것이 가능하다.)
+					*/
+					this.m_nLV = a_nLV;
+					this.m_nHP = a_nHP;
+					this.m_nATK = a_nATK;
+				}
+
+				/** 정보를 출력한다 */
+				ShowInfo() {
+					document.write(`레벨 : ${this.m_nLV}<br>`);
+					document.write(`체력 : ${this.m_nHP}<br>`);
+					document.write(`공격력 : ${this.m_nATK}<br>`);
+				}
+			}
+
+			/*
+			new 키워드는 클래스를 기반으로 객체를 생성하는 역할을 수행한다. (즉, new 키워드를 통해 특정 객체를 생성하면 해당 객체가 지니고
+			있는 멤버에 접근하는 것이 가능하다.)
+
+			생성 된 객체 하위에 존재하는 멤버에 접근하고 싶다면 . (멤버 지정 연산자) 연산자를 명시하면 된다.
+			*/
+			let oCharacter01 = new CCharacter();
+			oCharacter01.m_nLV = 1;
+			oCharacter01.m_nHP = 10;
+			oCharacter01.m_nATK = 15;
+
+			let oCharacter02 = new CCharacter(10, 100, 150);
+
+			/*
+			리터널 객체를 선언 할 경우 키 데이터에 " " 를 생략 할 경우 자동으로 문자열로 처리되는 특징이 존재한다. (즉, 해당 특징을 활용하면
+			속성 및 행위를 좀 더 수월하게 명시하는 것이 가능하다.)
+			*/
+			let oCharacter03 = {
+				m_nLV : 20,
+				m_nHP : 200,
+				m_nATK : 250,
+
+				/** 정보를 출력한다 */
+				ShowInfo : function() {
+					document.write(`레벨 : ${this.m_nLV}<br>`);
+					document.write(`체력 : ${this.m_nHP}<br>`);
+					document.write(`공격력 : ${this.m_nATK}<br>`);
+				}
+			};
+			
+			document.write("<p>=====> 플레이어 1 <=====</p>");
+			oCharacter01.ShowInfo();
+
+			document.write("<br><p>=====> 플레이어 2 <=====</p>");
+			oCharacter02.ShowInfo();
+
+			document.write("<br><p>=====> 플레이어 3 <=====</p>");
+			oCharacter03.ShowInfo();
+		</script>
+	</body>
+</html>
