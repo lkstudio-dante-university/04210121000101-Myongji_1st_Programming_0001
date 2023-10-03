@@ -4,8 +4,131 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Example 12</title>
 	</head>
 	<body>
-		
+		<!--
+		table 태그는 테이블을 생성하는 역할을 수행한다. (즉, 해당 태그를 활용하면 테이블을 웹 문서에 표현하는 것이 가능하다.)
+
+		테이블은 일반적으로 여러 행과 열과 이루어져있기 때문에 테이블을 올바르게 작성하기 위해서는 tr 태그 등을 이용해서 테이블의 각 행과 열에
+		명시하고 싶은 컨텐츠를 채워넣어야한다.
+		-->
+		<table>
+			<!--
+			caption 태그는 테이블의 제목을 명시하는 역할을 수행한다. (즉, 해당 태그를 활용하면 특정 테이블에 제목을 지정하는 것이 가능하다.)
+			-->
+			<caption>물품 정보</caption>
+
+			<!--
+			thead 태그는 테이블의 헤더 영역을 명시하는 역할을 수행한다. (즉, 해당 태그로 지정 된 행은 테이블의 헤더 영역으로 인식 되기 때문에
+			웹 문서를 인쇄 할 때 테이블이 여러 페이지에 나누어 인쇄 되더라도 헤더 영역이 각 페이지마다 자동으로 반복되는 특징이 존재한다.)
+			-->
+			<thead>
+				<!--
+				tr (table row) 태그는 테이블의 행을 표현하는 역할을 수행한다. (즉, 해당 태그를 명시하면 테이블의 행이 시작 된다는 것을
+				의미한다.)
+				-->
+				<tr>
+					<!--
+					th (table header) 태그는 일반적으로 테이블의 첫 행에 사용된다. (즉, 테이블의 각 열이 어떤 내용을 담고 있는지 알리는
+					역할에 주로 사용된다는 것을 의미한다.)
+					-->
+					<th>번호</th>
+					<th>상품</th>
+					<th>수량</th>
+					<th>가격</th>
+				</tr>
+			</thead>
+
+			<!--
+			tfoot 태그는 테이블의 하단 영역을 명시하는 역할을 수행한다. (즉, 해당 태그로 지정 된 행은 헤더 영역과 마찬가지로 여러 페이지로
+			나누어서 안쇄 되더라도 자동으로 반복되는 특징이 존재한다.)
+			-->
+			<tfoot>
+				<tr>
+					<!--
+					td (table data) 태그는 테이블의 각 셀을 표현하는 역할을 수행한다. (즉, 해당 태그를 명시함으로서 테이블의 각 셀에 들어갈
+					컨텐츠를 표현하는 것이 가능하다.)
+
+					또한, colspan 속성 or rowspan 속성을 활용해서 특정 열 or 행을 하나로 병합하는 것이 가능하다.
+					-->
+					<td>총 금액</td>
+					<td colspan="3">6,000 원</td>
+				</tr>
+			</tfoot>
+
+			<!--
+			tbody 태그는 테이블의 본문 영역을 명시하는 역할을 수행한다.
+			-->
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>콜라</td>
+					<td>1 개</td>
+					<td>1,500 원</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>사이다</td>
+					<td>2 개</td>
+					<td rowspan="2">1,000 원</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>탄산수</td>
+					<td>3 개</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br>
+
+		<table>
+			<caption>성적</caption>
+
+			<!--
+			col 태그 or colgroup 태그를 활용하면 테이블의 각 열에 스타일을 적용하는 것이 가능하다. (즉, 인라인 형식의 스타일을 적용
+			가능하다는 것을 알 수 있다.)
+
+			col 태그는 1 개의 열에만 적용하기 때문에 여러 열에 적용하기 위해서는 여러번 태그를 명시해줘야한다.
+			반면, colgroup 태그는 여러 열에 스타일을 적용 할 수 있기 때문에 동일한 스타일을 여러 열에 적용 할 때 주로 활용된다.
+			-->
+			<col style="width: 150px">
+			<colgroup span="2" style="width: 250px"></colgroup>
+
+			<tr>
+				<th>구분</th>
+				<th>중간고사</th>
+				<th>기말고사</th>
+			</tr>
+			<tr>
+				<th scope="row">전공</th>
+				<td>A+</td>
+				<td>B+</td>
+			</tr>
+			<tr>
+				<th scope="row">교양</th>
+				<td>C-</td>
+				<td>B-</td>
+			</tr>
+		</table>
+
+		<!--
+		style 태그는 특정 태그 및 속성 등의 스타일을 지정하는 역할을 수행한다. (즉, 해당 태그를 중점으로 웹 문서를 꾸미는 방법을 배우는 것이
+		CSS 의 주된 내용이라는 것을 알 수 있다.)
+		-->
+		<style>
+			table {
+				border: 1px;
+				border-style: solid;
+				border-collapse: collapse;
+			}
+
+			th, td {
+				border: 1px;
+				padding: 10px;
+				border-style: solid;
+			}
+		</style>
 	</body>
 </html>
