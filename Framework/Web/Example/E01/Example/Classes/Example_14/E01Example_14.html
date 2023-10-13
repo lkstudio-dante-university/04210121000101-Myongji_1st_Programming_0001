@@ -7,10 +7,30 @@
 		<title>Example 14</title>
 	</head>
 	<body>
-		<h1>Hello, World!</h1>
-		<p>태그 선택자를 이용하면 특정 태그에만 스타일을 적용하는 것이 가능하다.</p>
-		<p id="Title">아이디 선택자를 이용하면 식별자를 통해 스타일을 적용하는 것이 가능하다.</p>
+		<!--
+		DOM (Document Object Model) 이란?
+		- 웹 브라우저에서 표시되는 HTML 문서 구조를 객체화 시킨 모델 구조를 의미한다. (즉, 웹 브라우저는 DOM 을 통해 HTML 문서의 구성 요소를
+		객체로 인지 할 수 있다는 것을 알 수 있다.)
 
-		<link rel="stylesheet" href="./E01Example_14.css">
+		따라서, Java Script 는 DOM 을 제어함으로서 웹 브라우저 상에 표시되는 HTML 문서 구조를 변경하거나 새로운 구성 요소를 추가하는 작업 등을
+		할 수 있다.
+		-->
+		<form action="#" method="get">
+			<!--
+			autocomplete 속성은 자동 완성 여부를 설정하는 역할을 수행한다. (즉, 해당 속성을 활용하면 특정 데이터를 입력 받는 text 과 같은
+			입력 태그의 자동 완성 기능을 활성하거나 비활성하는 것이 가능하다.)
+			-->
+			<button type="button" id="AddCommentBtn" onclick="OnTouchAddItemBtn()">목록 추가</button>
+		</form>
+
+		<ul id="CommentList">
+			<!-- Java Script 에 의해서 동적으로 목록 추가 -->
+		</ul>
+
+		<!--
+		다른 파일에 존재하는 자바 스크립트 명령문을 사용하고 싶다면 script 태그의 src 속성을 활용하면 된다. (즉, 해당 속성을 이용하면 별도의
+		파일에 작성 된 자바 스크립트 명령문을 현재 문서에 포함해서 사용하는 것이 가능하다.)
+		-->
+		<script src="./Scripts/E01Example_14.js"></script>
 	</body>
 </html>
