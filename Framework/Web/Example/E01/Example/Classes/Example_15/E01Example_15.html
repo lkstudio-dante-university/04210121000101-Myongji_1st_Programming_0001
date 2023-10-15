@@ -7,6 +7,29 @@
 		<title>Example 15</title>
 	</head>
 	<body>
-		
+		<form action="#" method="get">
+			<fieldset>
+				<legend>회원 가입</legend>
+
+				<p>
+					<label for="ID">
+						아이디 <input type="text" id="ID" autocomplete="off">
+					</label>
+				</p>
+
+				<p>
+					<label for="Password">
+						비밀번호 <input type="password" id="Password" autocomplete="off">
+					</label>
+				</p>
+
+				<p>
+					<button type="button" onclick="OnTouchMemberShipBtn(true)">회원 가입</button>
+					<button type="button" onclick="OnTouchMemberShipBtn(false)">회원 정보 지우기</button>
+				</p>
+			</fieldset>
+		</form>
+
+		<script src="./Scripts/E01Example_15.js"></script>
 	</body>
 </html>
