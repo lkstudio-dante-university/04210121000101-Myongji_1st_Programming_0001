@@ -1,4 +1,7 @@
-// 윈도우가 로드 되었을 경우
+/*
+window 객체의 onload 속성은 웹 브라우저가 로드 되었을 때 호출 될 메서드를 지정하는 역할을 수행한다. (즉, 웹 문서가 로드 되었을 때 특정 데이터로
+초기화하고 싶을 경우 해당 속성을 활용하면 된다는 것을 알 수 있다.)
+*/
 window.onload = function() {
 	var oJSONStr = localStorage.getItem("Members");
 
