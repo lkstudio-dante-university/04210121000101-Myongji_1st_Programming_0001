@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Practice 1</title>
+	</head>
+	<body>
+		<form action="#" method="get">
+			<fieldset>
+				<legend>회원 가입</legend>
+
+				<p>
+					<label for="Password">
+						비밀번호 <input type="text" id="Password">
+					</label>
+				</p>
+
+				<p>
+					<label for="Confirm">
+						비밀번호 확인 <input type="text" id="Confirm">
+					</label>
+				</p>
+
+				<p>
+					<button type="button" onclick="OnTouchMemberBtn()">회원 가입</button>
+				</p>
+			</fieldset>
+		</form>
+
+		<script>
+			/** 회원 가입 버튼을 눌렀을 경우 */
+			function OnTouchMemberBtn() {
+				var oPassword = document.getElementById("Password");
+				var oConfirm = document.getElementById("Confirm");
+
+				// 비밀번호가 일치 할 경우
+				if(oPassword.value == oConfirm.value) {
+					alert("비밀번호가 확인되었습니다.");
+				} else {
+					alert("비밀번호를 확인해주세요.");
+				}
+			}
+		</script>
+	</body>
+</html>
