@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Practice 8</title>
+	</head>
+	<body>
+		<form action="#" method="get">
+			<fieldset>
+				<legend>로그인</legend>
+
+				<p>
+					<label for="ID">
+						아이디 <input type="text" id="ID">
+					</label>
+				</p>
+
+				<p>
+					<label for="ID">
+						비밀번호 <input type="password" id="Password">
+					</label>
+				</p>
+
+				<p>
+					<button type="button" onclick="OnTouchSigninBtn()">로그인</button>
+					<button type="button" onclick="OnTouchSignupBtn()">회원 가입</button>
+				</p>
+			</fieldset>
+		</form>
+
+		<script>
+			/** 로그인 버튼을 눌렀을 경우 */
+			function OnTouchSigninBtn() {
+				var oID = GetInputVal("ID");
+				var oPassword = GetInputVal("Password");
+			}
+
+			/** 회원 가입 버튼을 눌렀을 경우 */
+			function OnTouchSignupBtn() {
+
+			}
+		</script>
+
+		<script src="./P01Func_08.js"></script>
+	</body>
+</html>

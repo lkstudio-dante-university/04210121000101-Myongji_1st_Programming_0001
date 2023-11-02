@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Example 18</title>
+	</head>
+	<body>
+		<h1>
+			그룹 선택자
+		</h1>
+
+		<p>
+			그룹 선택자는 여러 기본 선택자를 하나의 그룹으로 묶어서 스타일을 적용하는 역할을 수행한다.
+		</p>
+
+		<div class="Box">
+			<p>자식 선택자는 특정 선택자 하위에 존재하는 자식 요소에 스타일을 적용하는 역할을 수행한다.</p>
+		</div>
+
+		<div>
+			<p>하위 선택자 - 1</p>
+			<ul>
+				<li>
+					<p>하위 선택자 - 2</p>
+				</li>
+				<li>
+					<p>하위 선택자 - 3</p>
+				</li>
+			</ul>
+
+			<p>하위 선택자는 자식 선택자의 범위를 좀 더 확장시켜서 요소 하위에 존재하는 모든 요소에 스타일을 적용하는 역할을 수행한다.</p>
+		</div>
+
+		<h1>인접 형제 선택자 - 1</h1>
+		<h2>인접 형제 선택자 - 2</h2>
+		<h2>인접 형제 선택자 - 3</h2>
+
+		<p>인접 형제 선택자는 특정 태그에 바로 인접한 형제 요소에 스타일을 적용하는 역할을 수행한다.</p>
+
+		<h3>일반 형제 선택자 - 1</h3>
+		<h4>일반 형제 선택자 - 2</h4>
+		<h4>일반 형제 선택자 - 3</h4>
+
+		<p>일반 형제 선택자는 특정 태그에 인접한 형제 요소에 모두 스타일을 적용하는 역할을 수행한다.</p>
+
+		<style>
+			/*
+			그룹 선택자
+			*/
+			p, #title, .red {
+				color: red;
+			}
+
+			/*
+			자식 선택자
+			*/
+			.Box > p {
+				color: green;
+			}
+
+			/*
+			하위 선택자
+			*/
+			div p {
+				color: blue;
+			}
+
+			/*
+			인접 형제 선택자
+			*/
+			h1 + h2 {
+				color: magenta;
+			}
+
+			/*
+			일반 형제 선택자
+			*/
+			h3 ~ h4 {
+				color: cyan;
+			}
+		</style>
+	</body>
+</html>
