@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Signup</title>
+	</head>
+	<body>
+		<form action="#" method="get">
+			<fieldset>
+				<legend id="Title">회원 가입</legend>
+
+				<p>
+					<label for="ID">
+						아이디 <input type="text" id="ID">
+					</label>
+				</p>
+
+				<p>
+					<label for="Password">
+						비밀번호 <input type="password" id="Password">
+					</label>
+				</p>
+
+				<p>
+					<label for="Man">
+						<input type="radio" name="Gender" id="Man" checked>남성
+					</label>
+
+					<label for="Woman">
+						<input type="radio" name="Gender" id="Woman">여성
+					</label>
+				</p>
+
+				<p>
+					<button type="button" onclick="OnTouchModifyBtn()" id="Modify">회원 수정</button>
+					<button type="button" onclick="OnTouchSigninBtn()" id="Signup">회원 가입</button>
+				</p>
+			</fieldset>
+		</form>
+
+		<script>
+			/** 윈도우가 로드 되었을 경우 */
+			window.onload = function() {
+				var oTitle = document.getElementById("Title");
+				oTitle.innerHTML = IsModify() ? "회원 수정" : "회원 가입";
+
+				var oIDInput = document.getElementById("ID");
+				oIDInput.disabled = IsModify();
+
+				var oModifyBtn = document.getElementById("Modify");
+				var oSignupBtn = document.getElementById("Signup");
+
+				// 수정 상태 일 경우
+				if(IsModify()) {
+					var oModifyID = localStorage.getItem("ModifyID");
+					var oMemberList = P01LoadMembers_08();
+
+					var nResult = P01FindMember_08(oMemberList, oModifyID);
+					oIDInput.value = oMemberList[nResult].m_oID;
+
+					oSignupBtn.remove();
+				} else {
+					oModifyBtn.remove();
+				}
+			}
+
+			/** 수정 상태 여부를 검사한다 */
+			function IsModify() {
+				var oModifyID = localStorage.getItem("ModifyID");
+				return oModifyID.length >= 1;
+			}
+
+			/** 수정 버튼을 눌렀을 경우 */
+			function OnTouchModifyBtn() {
+
+			}
+
+			/** 가입 버튼을 눌렀을 경우 */
+			function OnTouchSignupBtn() {
+
+			}
+		</script>
+
+		<script src="./P01Func_08.js"></script>
+		<script src="./P01Member_08.js"></script>
+	</body>
+</html>

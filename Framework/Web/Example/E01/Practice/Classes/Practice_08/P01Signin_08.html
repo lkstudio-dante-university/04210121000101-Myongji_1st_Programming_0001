@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Signin</title>
+	</head>
+	<body>
+		<table id="Members">
+			<tr>
+				<th>번호</th>
+				<th>아이디</th>
+				<th>비밀번호</th>
+				<th>성별</th>
+				<th>기타</th>
+			</tr>
+		</table>
+
+		<style>
+			table {
+				border: 1px;
+				border-style: solid;
+				border-collapse: collapse;
+			}
+
+			th, td {
+				border: 1px;
+				padding: 10px;
+				border-style: solid;
+			}
+		</style>
+
+		<script>
+			window.onload = function() {
+				var oJSONStr = localStorage.getItem("Members");
+
+				// 회원 정보가 없을 경우
+				if(oJSONStr == null || oJSONStr.length <= 0) {
+					return;
+				}
+
+				var oMemberList = JSON.parse(oJSONStr);
+				
+				for(var i = 0; i < oMemberList.length; ++i) {
+					AddMember(i + 1, oMemberList[i]);
+				}
+			}
+
+			/** 회원을 추가한다 */
+			function AddMember(a_nNum, a_oMember) {
+				var oTable = document.getElementById("Members");
+				var oTableRow = document.createElement("tr");
+
+				var oNumTableCol = document.createElement("td");
+				oNumTableCol.appendChild(document.createTextNode(a_nNum));
+
+				var oIDTableCol = document.createElement("td");
+				oIDTableCol.appendChild(document.createTextNode(a_oMember.m_oID));
+
+				var oPasswordTableCol = document.createElement("td");
+				oPasswordTableCol.appendChild(document.createTextNode(a_oMember.m_oPassword));
+
+				var oGenderTableCol = document.createElement("td");
+				oGenderTableCol.appendChild(document.createTextNode(a_oMember.GetGender()));
+
+				var oModifyBtn = document.createElement("button");
+				oModifyBtn.appendChild(document.createTextNode("수정"));
+				oModifyBtn.addEventListener("click", function() { OnTouchModifyBtn(a_oMember); });
+
+				var oRemoveBtn = document.createElement("button");
+				oRemoveBtn.appendChild(document.createTextNode("제거"));
+				oRemoveBtn.addEventListener("click", function() { OnTouchRemoveBtn(a_oMember); });
+
+				var oCommentBtn = document.createElement("button");
+				oCommentBtn.appendChild(document.createTextNode("게시글"));
+				oCommentBtn.addEventListener("click", function() { OnTouchCommentBtn(a_oMember); });
+
+				var oEtcTableCol = document.createElement("td");
+				oEtcTableCol.appendChild(oModifyBtn);
+				oEtcTableCol.appendChild(oRemoveBtn);
+				oEtcTableCol.appendChild(oCommentBtn);
+
+				oTableRow.appendChild(oNumTableCol);
+				oTableRow.appendChild(oIDTableCol);
+				oTableRow.appendChild(oPasswordTableCol);
+				oTableRow.appendChild(oGenderTableCol);
+				oTableRow.appendChild(oEtcTableCol);
+
+				oTable.appendChild(oTableRow);
+			}
+
+			/** 수정 버튼을 눌렀을 경우 */
+			function OnTouchModifyBtn(a_oMember) {
+				// Do Something
+			}
+
+			/** 제거 버튼을 눌렀을 경우 */
+			function OnTouchRemoveBtn(a_oMember) {
+				// Do Something
+			}
+
+			/** 게시글 버튼을 눌렀을 경우 */
+			function OnTouchCommentBtn(a_oMember) {
+				// Do Something
+			}
+		</script>
+
+		<script src="./P01Func_08.js"></script>
+		<script src="./P01Member_08.js"></script>
+	</body>
+</html>

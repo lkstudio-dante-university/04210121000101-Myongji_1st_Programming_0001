@@ -18,7 +18,7 @@
 				</p>
 
 				<p>
-					<label for="ID">
+					<label for="Password">
 						비밀번호 <input type="password" id="Password">
 					</label>
 				</p>
@@ -35,14 +35,32 @@
 			function OnTouchSigninBtn() {
 				var oID = GetInputVal("ID");
 				var oPassword = GetInputVal("Password");
+
+				// 입력 필드가 비어있을 경우
+				if(oID.length <= 0 || oPassword.length <= 0) {
+					alert("아이디와 패스워드를 입력해주세요.");
+					return;
+				}
+
+				var oMemberList = P01LoadMembers_08();
+				var nResult = P01FindMember_08(oMemberList, oID);
+
+				// 회원이 아닐 경우
+				if(nResult < 0) {
+					alert("아이디와 패스워드를 확인해주세요.");
+				} else {
+					window.location.href = "./P01Members_08.html";
+				}
 			}
 
-			/** 회원 가입 버튼을 눌렀을 경우 */
+			/** 가입 버튼을 눌렀을 경우 */
 			function OnTouchSignupBtn() {
-
+				localStorage.setItem("ModifyID", "");
+				window.location.href = "./P01Signup_08.html";
 			}
 		</script>
 
 		<script src="./P01Func_08.js"></script>
+		<script src="./P01Member_08.js"></script>
 	</body>
 </html>
