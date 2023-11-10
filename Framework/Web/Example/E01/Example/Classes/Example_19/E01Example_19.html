@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Example 19</title>
+	</head>
+	<body>
+		<!--
+		가상 클래스 선택자란?
+		- 특정 요소의 상태를 이용해서 스타일을 적용 할 수 있는 선택자를 의미한다. (즉, 가상 클래스 선택자를 활용하면 특정 상태에 따라 다양한
+		스타일을 적용하는 것이 가능하다.)
+		-->
+		<a href="http://www.google.com">링크 가상 클래스 선택자는 a 태그의 상태를 이용해서 스타일을 적용하는 역할을 수행한다.</a>
+
+		<!--
+		주요 동적 가상 클래스 선택자 종류
+		- hover				<- 마우스 포인터가 특정 태그 위에 있을 때 스타일 적용
+		- active			<- 특정 태그를 마우스로 클릭했을 때 스타일 적용
+		-->
+		<p>동적 가상 클래스 선택자는 사용자의 행동에 따라 변하는 상태를 이용해서 스타일을 적용하는 역할을 수행한다.</p>
+
+		<!--
+		주요 입력 요소 가상 클래스 선택자 종류
+		- focus				<- 요소에 입력 커서가 활용 상태 일 때 스타일 적용
+		- checked			<- 요소가 선택 상태 일 때 스타일 적용
+		- enabled			<- 요소가 활성 상태 일 때 스타일 적용
+		- disabled			<- 요소가 비활성 상태 일 때 스타일 적용
+		-->
+		<form action="#" method="get">
+			<p>
+				<input type="text">
+			</p>
+
+			<input type="checkbox">
+			<label>입력 가상 클래스 선택자</label>
+
+			<button>활성 버튼</button>
+			<button disabled>비활성 버튼</button>
+		</form>
+
+		<style>
+			/*
+			링크 가상 클래스 선택자
+			*/
+			a:link {
+				color: red;
+			}
+
+			a:visited {
+				color: green;
+			}
+
+			/*
+			동적 가상 클래스 선택자
+			*/
+			p:hover {
+				color: red;
+			}
+
+			p:active {
+				color: blue;
+			}
+
+			/*
+			입력 요소 가상 클래스 선택자
+			*/
+			input:focus {
+				color: red;
+			}
+
+			input:checked + label {
+				color: green;
+			}
+
+			button:enabled {
+				color: red;
+			}
+
+			button:disabled {
+				color: gray;
+			}
+		</style>
+	</body>
+</html>

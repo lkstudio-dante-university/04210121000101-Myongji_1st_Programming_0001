@@ -33,15 +33,8 @@
 
 		<script>
 			window.onload = function() {
-				var oJSONStr = localStorage.getItem("Members");
+				var oMemberList = P01LoadMembers_08();
 
-				// 회원 정보가 없을 경우
-				if(oJSONStr == null || oJSONStr.length <= 0) {
-					return;
-				}
-
-				var oMemberList = JSON.parse(oJSONStr);
-				
 				for(var i = 0; i < oMemberList.length; ++i) {
 					AddMember(i + 1, oMemberList[i]);
 				}
@@ -49,6 +42,8 @@
 
 			/** 회원을 추가한다 */
 			function AddMember(a_nNum, a_oMember) {
+				a_oMember = Object.assign(new CP01Member_08(), a_oMember);
+
 				var oTable = document.getElementById("Members");
 				var oTableRow = document.createElement("tr");
 
@@ -69,6 +64,7 @@
 				oModifyBtn.addEventListener("click", function() { OnTouchModifyBtn(a_oMember); });
 
 				var oRemoveBtn = document.createElement("button");
+				oRemoveBtn.disabled = a_oMember.m_oID == localStorage.getItem("SigninID");
 				oRemoveBtn.appendChild(document.createTextNode("제거"));
 				oRemoveBtn.addEventListener("click", function() { OnTouchRemoveBtn(a_oMember); });
 
@@ -78,7 +74,9 @@
 
 				var oEtcTableCol = document.createElement("td");
 				oEtcTableCol.appendChild(oModifyBtn);
+				oEtcTableCol.appendChild(document.createTextNode(" "));
 				oEtcTableCol.appendChild(oRemoveBtn);
+				oEtcTableCol.appendChild(document.createTextNode(" "));
 				oEtcTableCol.appendChild(oCommentBtn);
 
 				oTableRow.appendChild(oNumTableCol);
@@ -92,21 +90,31 @@
 
 			/** 수정 버튼을 눌렀을 경우 */
 			function OnTouchModifyBtn(a_oMember) {
-				// Do Something
+				localStorage.setItem("ModifyID", a_oMember.m_oID);
+				window.location.href = "./P01Signup_08.html";
 			}
 
 			/** 제거 버튼을 눌렀을 경우 */
 			function OnTouchRemoveBtn(a_oMember) {
-				// Do Something
+				var oMemberList = P01LoadMembers_08();
+				var nResult = P01FindMember_08(oMemberList, a_oMember.m_oID);
+
+				// 회원이 존재 할 경우
+				if(nResult >= 0) {
+					oMemberList.splice(nResult, 1);
+					P01SaveMembers_08(oMemberList);
+				}
+
+				window.location.reload();
 			}
 
 			/** 게시글 버튼을 눌렀을 경우 */
 			function OnTouchCommentBtn(a_oMember) {
-				// Do Something
+				localStorage.setItem("ModifyID", a_oMember.m_oID);
+				window.location.href = "./P01Comment_08.html";
 			}
 		</script>
-
-		<script src="./P01Func_08.js"></script>
+		
 		<script src="./P01Member_08.js"></script>
 	</body>
 </html>

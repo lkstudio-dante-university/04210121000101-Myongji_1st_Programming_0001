@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Comment</title>
+	</head>
+	<body>
+		<form action="#" method="get">
+			<label for="Comment">
+				<input type="text" id="Comment" autocomplete="off">
+			</label>
+
+			<button type="button" id="AddCommentBtn" onclick="OnTouchAddCommentBtn()">게시글 추가</button>
+		</form>
+
+		<ul id="CommentList">
+			<!-- Java Script 에 의해서 동적으로 목록 추가 -->
+		</ul>
+
+		<script>
+			window.onload = function() {
+				var oMemberList = P01LoadMembers_08();
+				var nResult = P01FindMember_08(oMemberList, localStorage.getItem("ModifyID"));
+
+				for(var i = 0; i < oMemberList[nResult].m_oCommentList.length; ++i) {
+					var oListItem = document.createElement("li");
+					oListItem.appendChild(document.createTextNode(oMemberList[nResult].m_oCommentList[i]));
+
+					var oCommentList = document.getElementById("CommentList");
+					oCommentList.appendChild(oListItem);
+				}
+			}
+
+			/** 게시글 추가 버튼을 눌렀을 경우 */
+			function OnTouchAddCommentBtn() {
+				var oComment = document.getElementById("Comment");
+
+				// 게시글이 없을 경우
+				if(oComment.value.length <= 0) {
+					return;
+				}
+
+				var oMemberList = P01LoadMembers_08();
+				var nResult = P01FindMember_08(oMemberList, localStorage.getItem("ModifyID"));
+
+				oMemberList[nResult].m_oCommentList.push(oComment.value);
+				P01SaveMembers_08(oMemberList);
+
+				window.location.reload();
+			}
+		</script>
+		
+		<script src="./P01Member_08.js"></script>
+	</body>
+</html>

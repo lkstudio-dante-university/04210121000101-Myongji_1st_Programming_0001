@@ -24,6 +24,12 @@
 				</p>
 
 				<p>
+					<label for="PasswordConfirm">
+						비밀번호 확인 <input type="password" id="PasswordConfirm">
+					</label>
+				</p>
+
+				<p>
 					<label for="Man">
 						<input type="radio" name="Gender" id="Man" checked>남성
 					</label>
@@ -35,7 +41,7 @@
 
 				<p>
 					<button type="button" onclick="OnTouchModifyBtn()" id="Modify">회원 수정</button>
-					<button type="button" onclick="OnTouchSigninBtn()" id="Signup">회원 가입</button>
+					<button type="button" onclick="OnTouchSignupBtn()" id="Signup">회원 가입</button>
 				</p>
 			</fieldset>
 		</form>
@@ -60,6 +66,12 @@
 					var nResult = P01FindMember_08(oMemberList, oModifyID);
 					oIDInput.value = oMemberList[nResult].m_oID;
 
+					var oManRadioBtn = document.getElementById("Man");
+					oManRadioBtn.checked = oMemberList[nResult].m_nGender == 0;
+					
+					var oWomanRadioBtn = document.getElementById("Woman");
+					oWomanRadioBtn.checked = oMemberList[nResult].m_nGender == 1;
+
 					oSignupBtn.remove();
 				} else {
 					oModifyBtn.remove();
@@ -72,18 +84,75 @@
 				return oModifyID.length >= 1;
 			}
 
+			/** 유효성 여부를 검사한다 */
+			function IsValidate() {
+				var oIDInput = document.getElementById("ID");
+				var oPasswordInput = document.getElementById("Password");
+				var oPasswordConfirmInput = document.getElementById("PasswordConfirm");
+
+				// 입력 필드가 비어있을 경우
+				if(oIDInput.value.length <= 0 || oPasswordInput.value.length <= 0) {
+					alert("아이디와 비밀번호를 입력해주세요.");
+					return false;
+				}
+
+				// 비밀번호가 다를 경우
+				if(oPasswordInput.value != oPasswordConfirmInput.value) {
+					alert("비밀번호를 확인해주세요");
+					return false;
+				}
+
+				return true;
+			}
+
 			/** 수정 버튼을 눌렀을 경우 */
 			function OnTouchModifyBtn() {
+				var oModifyID = localStorage.getItem("ModifyID");
+				var oPasswordInput = document.getElementById("Password");
 
+				// 수정이 불가능 할 경우
+				if(!IsValidate()) {
+					return;
+				}
+
+				var oMemberList = P01LoadMembers_08();
+				var nResult = P01FindMember_08(oMemberList, oModifyID);
+
+				var oManRadioBtn = document.getElementById("Man");
+
+				oMemberList[nResult].m_oPassword = oPasswordInput.value;
+				oMemberList[nResult].m_nGender = oManRadioBtn.checked ? 0 : 1;
+
+				P01SaveMembers_08(oMemberList);
 			}
 
 			/** 가입 버튼을 눌렀을 경우 */
 			function OnTouchSignupBtn() {
+				var oIDInput = document.getElementById("ID");
+				var oPasswordInput = document.getElementById("Password");
 
+				// 가입이 불가능 할 경우
+				if(!IsValidate()) {
+					return;
+				}
+
+				var oMemberList = P01LoadMembers_08();
+				var nResult = P01FindMember_08(oMemberList, oIDInput.value);
+
+				// 동일한 아이디가 존재 할 경우
+				if(nResult >= 0) {
+					alert("해당 아이디는 사용 할 수 없습니다.");
+					return;
+				}
+
+				var oManRadioBtn = document.getElementById("Man");
+				var oMember = new CP01Member_08(oIDInput.value, oPasswordInput.value, oManRadioBtn.checked ? 0 : 1);
+
+				oMemberList.push(oMember);
+				P01SaveMembers_08(oMemberList);
 			}
 		</script>
-
-		<script src="./P01Func_08.js"></script>
+		
 		<script src="./P01Member_08.js"></script>
 	</body>
 </html>
