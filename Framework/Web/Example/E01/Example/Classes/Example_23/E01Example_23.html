@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Example 23</title>
+	</head>
+	<body>
+		<!--
+		전환이란?
+		- 특정 요소의 속성 값을 다른 값으로 변경하는 것을 의미한다. (즉, 전환을 활용하면 속성 값이 변경되는 과정에서 애니메이션 효과를
+		적용하는 것이 가능하다.)
+
+		CSS 는 transition 속성을 활용해서 특정 요소에 전환을 적용하는 것이 가능하다.
+
+		transition 관련 주요 속성
+		- transition-delay				<- 전환 지연 시간 설정
+		- transition-duration			<- 전환 지속 시간 설정
+		- transition-property			<- 전환 대상 설정
+		- transition-timing-function	<- 이징 설정
+		-->
+		<div class="RedBox"></div>
+
+		<ul>
+			<li>Linear</li>
+			<li>Ease</li>
+			<li>Ease-In</li>
+			<li>Ease-Out</li>
+			<li>Ease-In-Out</li>
+		</ul>
+
+		<style>
+			.RedBox {
+				width: 250px;
+				height: 250px;
+				background-color: red;
+				transition-duration: 0.25s;
+			}
+
+			.RedBox:hover {
+				width: 300px;
+				height: 300px;
+				background-color: blue;
+				transition-duration: 0.25s;
+			}
+
+			li {
+				width: 500px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				background-color: red;
+			}
+
+			li:hover {
+				background-color: blue;
+				transition-duration: 1s;
+			}
+
+			li:nth-child(1) {
+				transition-timing-function: linear;
+			}
+
+			li:nth-child(2) {
+				transition-timing-function: ease;
+			}
+
+			li:nth-child(3) {
+				transition-timing-function: ease-in;
+			}
+
+			li:nth-child(4) {
+				transition-timing-function: ease-out;
+			}
+
+			li:nth-child(5) {
+				transition-timing-function: ease-in-out;
+			}
+		</style>
+	</body>
+</html>

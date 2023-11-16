@@ -7,11 +7,32 @@
 		<title>Example 22</title>
 	</head>
 	<body>
+		<!--
+		변환이란?
+		- 요소의 이동, 척도, 회전 정도를 변환이라고하며 해당 개념은 게임을 비롯한 여러 그래픽스 분야에서 활용된다. (즉, 게임은 일반적으로
+		변환을 통해 물체를 화면상에 배치한다는 것을 알 수 있다.)
+
+		CSS 는 transform 속성을 활용해서 특정 요소에 변환을 적용하는 것이 가능하다.
+
+		transform 관련 주요 속성
+		- translate		<- 이동 변환
+		- scale			<- 척도 변환
+		- rotate		<- 회전 변환
+
+		여러 변환을 적용하고 싶을 경우 " " (공백) 으로 각 변환을 명시해주시면 된다.
+
+		Ex)
+		transform: scale(1.0, 1.0) translate(100px, 100px)
+		-->
 		<div>
 			<p>Hello, World!</p>
 		</div>
 
 		<style>
+			p {
+				color: white;
+			}
+
 			div {
 				width: 250px;
 				height: 250px;
@@ -19,7 +40,11 @@
 			}
 
 			div:hover {
-				transform: rotate(45deg);
+				transform: scale(1.5, 1.5) rotate(45deg) translate(150px, 0px);
+			}
+
+			div > p {
+				transform: translate(50px, 0px);
 			}
 		</style>
 	</body>

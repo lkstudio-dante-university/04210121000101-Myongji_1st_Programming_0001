@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Example 24</title>
+	</head>
+	<body>
+		<!--
+		애니메이션이란?
+		- 전환 효과를 좀 더 세부적으로 제어 할 수 있는 기능을 의미한다. (즉, 애니메이션은 전환 효과와 함께 CSS 3 버전에 새롭게 추가 된
+		기능이라는 것을 알 수 있다.
+
+		CSS 는 animation 속성을 활용해서 특정 요소에 애니메이션을 적용하는 것이 가능하다.
+
+		animation 관련 주요 속성
+		- animation-name				<- 키 프레임 이름 설정
+		- animation-delay				<- 애니메이션 지연 시간 설정
+		- animation-duration			<- 애니메이션 지속 시간 설정
+		- animation-fill-mode			<- 애니메이션 실행 전/후 상태 설정
+		- animation-iteration-count		<- 애니메이션 실행 횟수 설정
+		- animation-play-state			<- 애니메이션 재생 여부 설정
+		- animation-direction			<- 애니메이션 진행 방향 설정
+		- animation-timing-function		<- 이징 설정
+		-->
+		<div></div>
+		<button type="button" id="Start">시작</button>
+		<button type="button" id="Pause">정지</button>
+
+		<script>
+			var oBox = document.querySelector("div");
+
+			document.getElementById("Start").addEventListener("click", function() {
+				oBox.style.animationPlayState = "running";
+			});
+
+			document.getElementById("Pause").addEventListener("click", function() {
+				oBox.style.animationPlayState = "paused";
+			});
+		</script>
+
+		<style>
+			div {
+				width: 350px;
+				height: 350px;
+				background-color: red;
+				animation-name: move;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;
+				animation-play-state: paused;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+			}
+
+			@keyframes move {
+				from {
+					transform: translate(0px, 0px);
+				}
+
+				to {
+					transform: translate(350px, 0px);
+				}
+			}
+		</style>
+	</body>
+</html>
