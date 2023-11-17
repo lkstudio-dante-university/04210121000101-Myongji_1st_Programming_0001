@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Practice 2</title>
+	</head>
+	
+	<body>
+		<form action="#" method="get">
+			<button type="button" onclick="OnTouchTransBtn(0)">척도</button>
+			<button type="button" onclick="OnTouchTransBtn(1)">회전</button>
+			<button type="button" onclick="OnTouchTransBtn(2)">이동</button>
+		</form>
+		
+		<div class="Target">
+			<!-- Do Something -->
+		</div>
+
+		<script>
+			/** 윈도우가 로드 되었을 경우 */
+			window.onload = function() {
+				var oTarget = document.getElementsByClassName("Target")[0];
+				oTarget.style.animationPlayState = "paused";
+			}
+
+			/** 트랜스 폼 버튼을 눌렀을 경우 */
+			function OnTouchTransBtn(a_nType) {
+				var oTarget = document.getElementsByClassName("Target")[0];
+				
+				switch(a_nType) {
+					case 0: oTarget.style.animationName = "Scale"; break;
+					case 1: oTarget.style.animationName = "Rotate"; break;
+					case 2: oTarget.style.animationName = "Translate"; break;
+				}
+
+				oTarget.style.animationPlayState = "running";
+				oTarget.style.animationDirection = (a_nType == 0) ? "alternate" : "normal";
+			}
+		</script>
+
+		<style>
+			.Target {
+				top: 100px;
+				left: 100px;
+
+				width: 350px;
+				height: 350px;
+
+				z-index: -1;
+				position: relative;
+				background-color: red;
+				
+				animation-duration: 2.0s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+			}
+
+			@keyframes Scale {
+				0% {
+					transform: scale(1.0);
+				}
+
+				100% {
+					transform: scale(1.5);
+				}
+			}
+
+			@keyframes Rotate {
+				0% {
+					transform: rotate(0deg);
+				}
+
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+
+			@keyframes Translate {
+				0%, 100% {
+					transform: translate(0px, 0px);
+				}
+
+				25% {
+					transform: translate(-100px, 0px);
+				}
+				
+				75% {
+					transform: translate(100px, 0px);
+				}
+			}
+		</style>
+	</body>
+</html>

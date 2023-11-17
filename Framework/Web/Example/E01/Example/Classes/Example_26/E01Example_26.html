@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Example 26</title>
+	</head>
+	<body>
+		<!--
+		배경이란?
+		- 박스 모델 영역 중 padding 영역과 content 영역에 색상이나 이미지와 같은 스타일을 지정 할 수 있는 개념을 의미한다. (즉, 배경을 
+		활용하면 특정 요소에 색상 등을 채워넣는 것이 가능하다.)
+
+		배경 관련 주요 속성
+		- background-color
+		- background-image
+		- background-repeat
+		- background-size
+		-->
+		<div class="Box"></div>
+		<div class="ImageBox"></div>
+	</body>
+
+	<style>
+		.ColorBox {
+			width: 650px;
+			height: 300px;
+			margin-bottom: 10px;
+			background-color: red;
+		}
+
+		.ImageBox {
+			width: 650px;
+			height: 300px;
+			margin-bottom: 10px;
+			background-size: auto;
+			background-repeat: repeat;
+			background-image: url("../../Resources/Example_11/E01Google_11.png");
+			border: 1px solid black;
+		}
+	</style>
+</html>
