@@ -1,3 +1,12 @@
+<!--
+레이아웃이란?
+- HTML 요소를 일정한 규칙에 따라 배치 할 수 있는 기능을 의미한다. (즉, 레이아웃을 활용하면 특정 규칙에 맞춰서 HTML 요소를 정렬하는 것이
+가능하다.)
+
+CSS 레이아웃 종류
+- 플렉스 레이아웃
+- 그리드 레이아웃
+-->
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -6,38 +15,50 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Example 27</title>
 	</head>
+	
 	<body>
 		<!--
-		배경이란?
-		- 박스 모델 영역 중 padding 영역과 content 영역에 색상이나 이미지와 같은 스타일을 지정 할 수 있는 개념을 의미한다. (즉, 배경을 
-		활용하면 특정 요소에 색상 등을 채워넣는 것이 가능하다.)
-
-		배경 관련 주요 속성
-		- background-color
-		- background-image
-		- background-repeat
-		- background-size
+		플렉스 (플렉서블) 레이아웃이란?
+		- HTML 요소들을 선형적으로 배치 할 수 있는 레이아웃을 의미한다. (즉, 플렉스 레이아웃을 활용하면 1 차원 방식으로 HTML 요소를
+		정렬 할 수 있다는 것을 알 수 있다.)
+		
+		플렉스 레이아웃 관련 용어
+		- 메인 축
+		- 크로스 축
+		
+		플렉스 레이아웃 관련 주요 속성
+		- align-items
+		- flex-direction
+		- justify-content
 		-->
-		<div class="Box"></div>
-		<div class="ImageBox"></div>
+		<div class="FlexContainer">
+			<div class="FlexItem">플렉스 아이템 - 1</div>
+			<div class="FlexItem">플렉스 아이템 - 2</div>
+			<div class="FlexItem">플렉스 아이템 - 3</div>
+			<div class="FlexItem">플렉스 아이템 - 4</div>
+		</div>
 	</body>
 
 	<style>
-		.ColorBox {
-			width: 650px;
+		.FlexContainer {
+			width: 750px;
 			height: 300px;
-			margin-bottom: 10px;
+			border: 1px solid black;
+			background-color: #c4c4c4;
+
+			display: flex;
+			align-items: stretch;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+
+		.FlexItem {
+			color: white;
 			background-color: red;
 		}
 
-		.ImageBox {
-			width: 650px;
-			height: 300px;
-			margin-bottom: 10px;
-			background-size: auto;
-			background-repeat: repeat;
-			background-image: url("../../Resources/Example_11/E01Google_11.png");
-			border: 1px solid black;
+		.FlexItem:nth-child(2n) {
+			background-color: green;
 		}
 	</style>
 </html>

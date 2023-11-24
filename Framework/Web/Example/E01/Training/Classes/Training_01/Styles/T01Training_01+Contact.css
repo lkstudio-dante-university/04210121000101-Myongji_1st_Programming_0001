@@ -1,0 +1,82 @@
+section.Contact .ContactMe::after {
+	content: "";
+	display: block;
+
+	clear: both
+}
+
+section.Contact .ContactMe .Left {
+	width: 30%;
+	float: left;
+}
+
+section.Contact .ContactMe .Left .Card {
+	border: 1px solid #cccccc;
+	margin-bottom: 1.25rem;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+section.Contact .ContactMe .Left .Card .Icon i {
+	font-size: 2rem;
+	padding-right: 15px;
+}
+
+section.Contact .ContactMe .Right {
+	width: 65%;
+	padding: 1rem;
+	margin-left: 5%;
+	margin-bottom: 2rem;
+
+	float: left;
+	border: 1px solid #cccccc;
+}
+
+section.Contact .ContactMe .Right .FormGroup {
+	margin-bottom: 1.25rem;
+}
+
+section.Contact .ContactMe .Right .FormGroup label {
+	display: block;
+	margin-bottom: 0.85rem;
+}
+
+section.Contact .ContactMe .Right .FormGroup input {
+	padding: 0.625rem;
+	width: 100%;
+	outline: none;
+
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+}
+
+section.Contact .ContactMe .Right .FormGroup input:focus {
+	border: 1px solid #719ece;
+	box-shadow: 0px 0px 10px #719ece;
+}
+
+section.Contact .ContactMe .Right .FormGroup textarea {
+	width: 100%;
+	height: 300px;
+
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+
+	resize: none;
+}
+
+section.Contact .ContactMe .Right .FormGroup textarea:focus {
+	border: 1px solid #719ece;
+	box-shadow: 0px 0px 10px #719ece;
+
+	outline: none;
+}
+
+section.Contact .ContactMe .Right button {
+	color: white;
+	width: 100%;
+	padding: 1rem;
+	background-color: #f78b00;
+	border: none;
+}

@@ -1,0 +1,60 @@
+section .Title {
+	margin-bottom: 3rem;
+}
+
+section .Title h4 {
+	color: #ed4848;
+	position: relative;
+
+	font-size: 1.35rem;
+}
+
+section .Title h2 {
+	font-size: 3.5rem;
+}
+
+section .Title p {
+	font-size: 1.15rem;
+}
+
+section .AboutTitle::after {
+	content: "";
+	display: block;
+
+	clear: both;
+}
+
+section .AboutSelf .Left {
+	width: 50%;
+	float: left;
+}
+
+section .AboutSelf .Left img {
+	max-width: 100%;
+}
+
+section .AboutSelf .Right {
+	width: 50%;
+	float: left;
+
+	padding: 0px 2rem;
+}
+
+section .AboutSelf .Right h3 {
+	font-size: 2.25rem;
+	margin-bottom: 1rem;
+}
+
+section .AboutSelf .Right h3 strong {
+	color: #ed4848
+}
+
+section .AboutSelf .Right p {
+	margin: 1rem 0px;
+	font-size: 1.15rem;
+}
+
+section .AboutSelf .Right .Social a {
+	margin-right: 0.2rem;
+	font-size: 2.5rem;
+}
