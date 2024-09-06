@@ -15,15 +15,15 @@ Python 은 라이브러리라는 용어보다는 모듈이라는 용어를 사�
 import os
 import sys
 
-from _04010103000101_Myongji_1st_Programming_0001.E01.Example.Scripts.Runtime.Example_09.E01Example_09 import E01Example_09
-from _04010103000101_Myongji_1st_Programming_0001.E01.Example.Scripts.Runtime.Example_10.E01Example_10 import E01Example_10
-from _04010103000101_Myongji_1st_Programming_0001.E01.Example.Scripts.Runtime.Example_11.E01Example_11 import E01Example_11
-from _04010103000101_Myongji_1st_Programming_0001.E01.Example.Scripts.Runtime.Example_12.E01Example_12 import E01Example_12
-from _04010103000101_Myongji_1st_Programming_0001.E01.Example.Scripts.Runtime.Example_13.E01Example_13 import E01Example_13
-from _04010103000101_Myongji_1st_Programming_0001.E01.Example.Scripts.Runtime.Example_14.E01Example_14 import E01Example_14
+from _04010103000101_M_1_Programming_0001.E01.Example.Scripts.Runtime.Example_09.E01Example_09 import E01Example_09
+from _04010103000101_M_1_Programming_0001.E01.Example.Scripts.Runtime.Example_10.E01Example_10 import E01Example_10
+from _04010103000101_M_1_Programming_0001.E01.Example.Scripts.Runtime.Example_11.E01Example_11 import E01Example_11
+from _04010103000101_M_1_Programming_0001.E01.Example.Scripts.Runtime.Example_12.E01Example_12 import E01Example_12
+from _04010103000101_M_1_Programming_0001.E01.Example.Scripts.Runtime.Example_13.E01Example_13 import E01Example_13
+from _04010103000101_M_1_Programming_0001.E01.Example.Scripts.Runtime.Example_14.E01Example_14 import E01Example_14
 
-from _04010103000101_Myongji_1st_Programming_0001.E01.Practice.Scripts.Runtime.Practice_12.P01Practice_12 import P01Practice_12
-from _04010103000101_Myongji_1st_Programming_0001.E01.Practice.Scripts.Runtime.Practice_15.P01Practice_15 import P01Practice_15
+from _04010103000101_M_1_Programming_0001.E01.Practice.Scripts.Runtime.Practice_12.P01Practice_12 import P01Practice_12
+from _04010103000101_M_1_Programming_0001.E01.Practice.Scripts.Runtime.Practice_15.P01Practice_15 import P01Practice_15
 
 """
 Python 학습 사이트
