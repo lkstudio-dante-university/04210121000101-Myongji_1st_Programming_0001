@@ -16,7 +16,7 @@ def E01Example_12_01(args):
 	"""
 	oTupleValues = (1, 2, 3)
 	
-	print("=====> 튜플 요소 <=====")
+	print("=====> 튜플 <=====")
 	print("{0}, {1}, {2}".format(oTupleValues[0], oTupleValues[1], oTupleValues[2]))
 	
 	"""
@@ -40,5 +40,5 @@ def E01Example_12_01(args):
 		"""
 		oSetValues.add(random.randint(1, 9))
 	
-	print("\n=====> 셋 요소 <=====")
+	print("\n=====> 셋 <=====")
 	print("{0}".format(oSetValues))

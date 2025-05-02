@@ -10,7 +10,7 @@ def P01Practice_12_02(args):
 	for i in range(0, 10):
 		oListValues.append(random.randint(1, 99))
 	
-	print("=====> 리스트 요소 <=====")
+	print("=====> 리스트 <=====")
 	print("{0}".format(oListValues))
 	
 	nMinVal = oListValues[0]

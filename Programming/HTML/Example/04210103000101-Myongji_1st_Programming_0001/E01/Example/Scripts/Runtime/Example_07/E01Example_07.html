@@ -67,13 +67,13 @@
 				oVals02.push(oVals);
 			}
 
-			document.write("<p>=====> 배열 1 요소 <=====</p>");
+			document.write("<p>=====> 배열 1 <=====</p>");
 
 			for(let i = 0; i < oVals01.length; ++i) {
 				document.write(`${oVals01[i]}, `);
 			}
 
-			document.write("<br><br><p>=====> 배열 2 요소 <=====</p>");
+			document.write("<br><br><p>=====> 배열 2 <=====</p>");
 
 			for(let i = 0; i < oVals02.length; ++i) {
 				for(let j = 0; j < oVals02[i].length; ++j) {
@@ -95,7 +95,7 @@
 			*/
 			oVals03.shift();
 
-			document.write("<br><p>=====> 배열 3 요소 <=====</p>");
+			document.write("<br><p>=====> 배열 3 <=====</p>");
 
 			for(let i = 0; i < oVals03.length; ++i) {
 				document.write(`${oVals03[i]}, `);
@@ -121,7 +121,7 @@
 				oDictValues01[`Key_${i + 1}`] = i + 1;
 			}
 
-			document.write("<br><br><p>=====> 딕셔너리 1 요소 <=====</p>");
+			document.write("<br><br><p>=====> 딕셔너리 1 <=====</p>");
 
 			for(let oKey in oDictValues01) {
 				document.write(`${oKey}:${oDictValues01[oKey]}, `);
@@ -133,7 +133,7 @@
 			*/
 			delete oDictValues02["Key_1"];
 
-			document.write("<br><br><p>=====> 딕셔너리 2 요소 <=====</p>");
+			document.write("<br><br><p>=====> 딕셔너리 2 <=====</p>");
 
 			for(let oKey in oDictValues02) {
 				document.write(`${oKey}:${oDictValues02[oKey]}, `);

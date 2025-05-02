@@ -32,7 +32,7 @@ def E01Example_11_01(args):
 	"""
 	oListValues[0] = 10
 	
-	print("=====> 리스트 요소 <=====")
+	print("=====> 리스트 <=====")
 	print("{0}, {1}, {2}".format(oListValues[0], oListValues[1], oListValues[2]))
 	
 	"""
@@ -66,7 +66,7 @@ def E01Example_11_01(args):
 	
 	위와 같이 개행 문자로 인해 A, B, C 가 각각 다른 줄에 출력되는 것을 확인 할 수 있다.
 	"""
-	print("\n=====> 리스트 요소 - 삭제 후 <=====")
+	print("\n=====> 리스트 - 삭제 후 <=====")
 	print("{0}".format(oListValues))
 	
 	"""
@@ -92,7 +92,7 @@ def E01Example_11_01(args):
 	oDictValues["Key_04"] = 4
 	oDictValues["Key_05"] = 5
 	
-	print("\n=====> 딕셔너리 요소 <=====")
+	print("\n=====> 딕셔너리 <=====")
 	print("{0}, {1}, {2}".format(oDictValues["Key_01"], oDictValues["Key_02"], oDictValues["Key_03"]))
 	
 	"""
@@ -101,5 +101,5 @@ def E01Example_11_01(args):
 	del oDictValues["Key_01"]
 	[oDictValues.pop(oKey) for oKey in ["Key_02", "Key_03"]]
 	
-	print("\n=====> 딕셔너리 요소 - 삭제 후 <=====")
+	print("\n=====> 딕셔너리 - 삭제 후 <=====")
 	print("{0}".format(oDictValues))
